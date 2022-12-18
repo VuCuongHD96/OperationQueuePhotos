@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		61C88E0C0A8B7053B2F1287C /* Pods_OperationQueuePhotos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58A56926B0F26FE48BDC8BA7 /* Pods_OperationQueuePhotos.framework */; };
+		961F5F28294F20EC003E84A9 /* ImageDownLoaderOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961F5F27294F20EC003E84A9 /* ImageDownLoaderOperation.swift */; };
+		961F5F2A294F24AF003E84A9 /* DownLoadOperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961F5F29294F24AF003E84A9 /* DownLoadOperationQueue.swift */; };
+		961F5F2D294F5846003E84A9 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961F5F2C294F5846003E84A9 /* Photo.swift */; };
 		96E879E3294DC73000A671F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E879E2294DC73000A671F2 /* AppDelegate.swift */; };
 		96E879E5294DC73000A671F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E879E4294DC73000A671F2 /* SceneDelegate.swift */; };
 		96E879E7294DC73000A671F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E879E6294DC73000A671F2 /* ViewController.swift */; };
@@ -22,6 +25,9 @@
 		1269FB21FF89740FB1BD2B6E /* Pods-OperationQueuePhotos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OperationQueuePhotos.debug.xcconfig"; path = "Target Support Files/Pods-OperationQueuePhotos/Pods-OperationQueuePhotos.debug.xcconfig"; sourceTree = "<group>"; };
 		58A56926B0F26FE48BDC8BA7 /* Pods_OperationQueuePhotos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OperationQueuePhotos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		62E7D1BC66F8A6A4A17EB4A9 /* Pods-OperationQueuePhotos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OperationQueuePhotos.release.xcconfig"; path = "Target Support Files/Pods-OperationQueuePhotos/Pods-OperationQueuePhotos.release.xcconfig"; sourceTree = "<group>"; };
+		961F5F27294F20EC003E84A9 /* ImageDownLoaderOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownLoaderOperation.swift; sourceTree = "<group>"; };
+		961F5F29294F24AF003E84A9 /* DownLoadOperationQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownLoadOperationQueue.swift; sourceTree = "<group>"; };
+		961F5F2C294F5846003E84A9 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		96E879DF294DC73000A671F2 /* OperationQueuePhotos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OperationQueuePhotos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E879E2294DC73000A671F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96E879E4294DC73000A671F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,8 +92,18 @@
 		961F5F26294EBE56003E84A9 /* Operations */ = {
 			isa = PBXGroup;
 			children = (
+				961F5F27294F20EC003E84A9 /* ImageDownLoaderOperation.swift */,
+				961F5F29294F24AF003E84A9 /* DownLoadOperationQueue.swift */,
 			);
 			path = Operations;
+			sourceTree = "<group>";
+		};
+		961F5F2B294F583A003E84A9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				961F5F2C294F5846003E84A9 /* Photo.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		96E879D6294DC73000A671F2 = {
@@ -111,6 +127,7 @@
 		96E879E1294DC73000A671F2 /* OperationQueuePhotos */ = {
 			isa = PBXGroup;
 			children = (
+				961F5F2B294F583A003E84A9 /* Model */,
 				961F5F26294EBE56003E84A9 /* Operations */,
 				961F5F25294EBE3E003E84A9 /* Application */,
 				961F5F24294EBE2B003E84A9 /* Scenes */,
@@ -245,8 +262,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				961F5F2D294F5846003E84A9 /* Photo.swift in Sources */,
+				961F5F28294F20EC003E84A9 /* ImageDownLoaderOperation.swift in Sources */,
 				96E879F9294DC8BC00A671F2 /* PhotoCell.swift in Sources */,
 				96E879E7294DC73000A671F2 /* ViewController.swift in Sources */,
+				961F5F2A294F24AF003E84A9 /* DownLoadOperationQueue.swift in Sources */,
 				96E879E3294DC73000A671F2 /* AppDelegate.swift in Sources */,
 				96E879E5294DC73000A671F2 /* SceneDelegate.swift in Sources */,
 			);
@@ -396,6 +416,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GCAT449K7M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OperationQueuePhotos/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -425,6 +446,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GCAT449K7M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OperationQueuePhotos/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

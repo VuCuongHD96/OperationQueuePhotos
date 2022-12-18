@@ -16,15 +16,7 @@ class PhotoCell: UITableViewCell, NibReusable {
         super.awakeFromNib()
     }
     
-    func setupContent(urlString: String) {
-        if let url = URL(string: urlString) {
-            DispatchQueue.global().async {
-                let imageData = try! Data(contentsOf: url)
-                let image = UIImage(data: imageData)
-                DispatchQueue.main.async {
-                    self.photoImageView.image = image
-                }
-            }
-        }
+    func setupContent(photo: Photo) {
+        photoImageView?.image = photo.image
     }
 }
